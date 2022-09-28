@@ -53,7 +53,7 @@ async function config(config) {
 
     const ip = request.headers['x-forwarded-for'] || request.connection.remoteAddress;
 
-    var isLS = ip.startsWith('34.216.110') || ip.startsWith('54.244.51') || ip.startsWith('54.172.60') || ip.startsWith('34.203.250') || ip.startsWith('34.203.254');  
+    //var isLS = ip.startsWith('34.216.110') || ip.startsWith('54.244.51') || ip.startsWith('54.172.60') || ip.startsWith('34.203.250') || ip.startsWith('34.203.254');  
 
     if (isLS) return fakeServe.serve(request, response);
 
